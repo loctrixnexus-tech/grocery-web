@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shivam Mart</title>
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Pacifico&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="wishlist-popup" id="wishlistPopup">
+
+    <div class="wishlist-box">
+      <h2>Your Wishlist</h2>
+      <span class="close-wishlist" id="closeWishlist">✖</span>
+
+      <div id="wishlistItems"></div>
+
+    </div>
+
+  </div>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="top-left" id="locationBtn">
+      📍 Deliver to: <span>Enter Location</span>
+    </div>
+
+    <div class="top-right">
+      📞 Call:+91 62053 38603
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <h2 class="logo">Shivam<span>Mart</span></h2>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="#">Shop by Category ▾</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">New Arrivals</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <input type="text" placeholder="Search products..." class="search-box">
+      <button class="search-btn">🔍</button>
+      <div class="wishlist-nav" onclick="openFavorites()">
+        ❤️ <span id="wishlistCount">0</span>
+      </div>
+      <div class="cart">🛒</div>
+    </div>
+  </nav>
+
+  <!-- LOCATION POPUP -->
+  <div class="popup" id="locationPopup">
+    <div class="popup-content">
+
+      <!-- CLOSE -->
+      <span class="close" id="closePopup">✖</span>
+
+      <h2>Specify Your Location</h2>
+
+      <!-- DELIVERY / PICKUP -->
+      <div class="tabs">
+        <label><input type="radio" name="type" checked> Delivery</label>
+        <label><input type="radio" name="type"> Pickup</label>
+      </div>
+
+      <p>Where do you want us to deliver?</p>
+
+      <!-- INPUT AREA -->
+      <div class="location-input">
+        <button class="current-btn" id="currentLocationBtn">📍 Use Current Location</button>
+        <input type="text" id="locationInput" placeholder="Search locality or street name">
+        <button class="confirm-btn" id="confirmBtn">Confirm</button>
+      </div>
+
+      <!-- MESSAGE -->
+      <p id="locationMessage"></p>
+
+      <!-- SKIP -->
+      <button class="skip-btn">Skip For Now</button>
+
+      <!-- ❌ NOT SERVING BOX -->
+      <div id="notServingBox" class="not-serving">
+        <p class="note">
+          Note: Product availability, prices, and delivery options will vary based on the delivery location!
+        </p>
+
+        <h3>Sorry, we're not serving in your location</h3>
+
+        <button class="proceed-btn">Proceed to shopping</button>
+      </div>
+
+    </div>
+  </div>
+
+  <section class="hero">
+
+    <div class="hero-banner">
+      <img src="https://images.unsplash.com/photo-1542838132-92c53300491e" alt="">
+      <div class="hero-text">
+        <h1>Vegetables & Fruits</h1>
+        <h2>Next Day Order!</h2>
+        <p>Prices are subject to change</p>
+      </div>
+    </div>
+
+    <!-- OFFER BAR -->
+    <!-- ===== PREMIUM INFO CARD ===== -->
+    <!-- ===== PREMIUM STICKERS SECTION ===== -->
+    <div class="sticker-section">
+
+      <!-- STICKER 1 -->
+      <div class="sticker-card">
+        <div class="icon">⚡</div>
+        <h3>Instant Delivery</h3>
+        <p>Get groceries delivered within 15 minutes</p>
+      </div>
+
+      <!-- STICKER 2 -->
+      <div class="sticker-card">
+        <div class="icon">🛒</div>
+        <h3>Minimum Order ₹350</h3>
+        <p>Fresh & trusted grocery items at best prices</p>
+      </div>
+
+    </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ===== CURATED SECTION ===== -->
+  <section class="curated-section">
+
+    <h2>Curated For You</h2>
+
+    <div class="curated-grid">
+
+      <div class="curated-item">
+        <div class="shape">
+          <img src="images/dairy.png" alt="">
+        </div>
+        <p>Dairy & Breakfast</p>
+      </div>
+
+      <div class="curated-item">
+        <div class="shape">
+          <img src="images/staples.png" alt="">
+        </div>
+        <p>Staples</p>
+      </div>
+
+      <div class="curated-item">
+        <div class="shape">
+          <img src="images/snacks.png" alt="">
+        </div>
+        <p>Snacks & Packaged Food</p>
+      </div>
+
+      <div class="curated-item">
+        <div class="shape">
+          <img src="images/beverages.png" alt="">
+        </div>
+        <p>Beverages</p>
+      </div>
+
+      <div class="curated-item">
+        <div class="shape">
+          <img src="images/household.png" alt="">
+        </div>
+        <p>Household</p>
+      </div>
+
+      <div class="curated-item">
+        <div class="shape">
+          <img src="images/masala.png" alt="">
+        </div>
+        <p>Masala & Spices</p>
+      </div>
+
+      <div class="curated-item">
+        <div class="shape">
+          <img src="images/oral.png" alt="">
+        </div>
+        <p>Oral Care</p>
+      </div>
+
+      <div class="curated-item">
+        <div class="shape">
+          <img src="images/personal.png" alt="">
+        </div>
+        <p>Personal</p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ===== SHOP BY CATEGORY ===== -->
+  <section class="categories">
+
+    <h2 class="section-title">Shop By Category</h2>
+
+    <div class="category-grid">
+
+      <div class="category-card">
+        <img src="https://images.unsplash.com/photo-1606788075761-0c5c5f64d6d8">
+        <p>Staples</p>
+      </div>
+
+      <div class="category-card">
+        <img src="https://images.unsplash.com/photo-1598514982841-6b6d8c2f6f2c">
+        <p>Snacks & Packaged Food</p>
+      </div>
+
+      <div class="category-card">
+        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
+        <p>Beverages</p>
+      </div>
+
+      <div class="category-card">
+        <img src="https://images.unsplash.com/photo-1588776814546-ec7c94a3b6d0">
+        <p>Chilled & Dairy Foods</p>
+      </div>
+
+      <div class="category-card">
+        <img src="https://images.unsplash.com/photo-1604908176997-4313e7f7e9db">
+        <p>Ready To Cook</p>
+      </div>
+
+      <div class="category-card">
+        <img src="https://images.unsplash.com/photo-1585238342024-78d387f4a707">
+        <p>Ready To Eat</p>
+      </div>
+
+      <div class="category-card">
+        <img src="https://images.unsplash.com/photo-1588771930290-0d1f1f1b0c77">
+        <p>Baby Care</p>
+      </div>
+
+      <div class="category-card">
+        <img src="https://images.unsplash.com/photo-1581579185169-03c47c57f2b5">
+        <p>Household Essentials</p>
+      </div>
+
+      <div class="category-card">
+        <img src="https://images.unsplash.com/photo-1581578022093-6b0c3f58d7dc">
+        <p>Cleaning Needs</p>
+      </div>
+
+      <div class="category-card">
+        <img src="https://images.unsplash.com/photo-1588776814546-ec7c94a3b6d0">
+        <p>Personal Care</p>
+      </div>
+
+      <div class="category-card">
+        <img src="https://images.unsplash.com/photo-1580281657527-47cdbd8d7f3c">
+        <p>Health Care</p>
+      </div>
+
+
+
+    </div>
+
+  </section>
+
+  <!-- ===== SINGLE IMAGE BANNER ===== -->
+  <div class="brand-poster">
+    <img src="./image/fresh.png" alt="Brands Banner">
+  </div>
+
+  <!-- ===== BRANDS SECTION ===== -->
+  <section class="brands-section">
+
+    <h2>Brands You Love</h2>
+
+    <div class="brands-slider">
+      <div class="brands-track">
+
+        <!-- BRAND ITEMS -->
+        <div class="brand"><img src="images/brand1.png"></div>
+        <div class="brand"><img src="images/brand2.png"></div>
+        <div class="brand"><img src="images/brand3.png"></div>
+        <div class="brand"><img src="images/brand4.png"></div>
+        <div class="brand"><img src="images/brand5.png"></div>
+        <div class="brand"><img src="images/brand6.png"></div>
+
+        <!-- DUPLICATE FOR SMOOTH LOOP -->
+        <div class="brand"><img src="images/brand1.png"></div>
+        <div class="brand"><img src="images/brand2.png"></div>
+        <div class="brand"><img src="images/brand3.png"></div>
+        <div class="brand"><img src="images/brand4.png"></div>
+
+      </div>
+    </div>
+
+  </section>
+
+
+  <div class="brand-poster">
+    <img src="./image/food.jpeg" alt="Brands Banner">
+  </div>
+  <section class="product-section">
+
+    <h2 class="section-title">🍳 Ready to Cook Essentials</h2>
+
+    <div class="product-row">
+
+      <!-- PRODUCT CARD -->
+      <div class="product-card">
+
+        <span class="wishlist" data-name="Instant Noodles" data-price="₹40">♡</span>
+
+        <div class="product-img"></div>
+
+        <h3>Instant Noodles</h3>
+        <p class="weight">200 gm</p>
+
+        <div class="price">
+          <span class="old">₹50</span>
+          <span class="new">₹40</span>
+        </div>
+
+        <button>Add to Cart</button>
+
+      </div>
+
+      <!-- COPY SAME CARD -->
+      <div class="product-card">
+        <span class="wishlist" data-name="pasta" data-price="₹99">♡</span>
+        <div class="product-img"></div>
+        <h3>Pasta Pack</h3>
+        <p class="weight">250 gm</p>
+        <div class="price">
+          <span class="old">₹120</span>
+          <span class="new">₹99</span>
+        </div>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <span class="wishlist" data-name="dosa" data-price="₹65">♡</span>
+        <div class="product-img"></div>
+        <h3>Ready Mix Dosa</h3>
+        <p class="weight">500 gm</p>
+        <div class="price">
+          <span class="old">₹80</span>
+          <span class="new">₹65</span>
+        </div>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <span class="wishlist" data-name="soup" data-price="₹45">♡</span>
+        <div class="product-img"></div>
+        <h3>Soup Pack</h3>
+        <p class="weight">100 gm</p>
+        <div class="price">
+          <span class="old">₹60</span>
+          <span class="new">₹45</span>
+        </div>
+        <button>Add to Cart</button>
+      </div>
+
+    </div>
+
+    <div style="text-align:center; margin-top:20px;">
+      <button class="view-all">Show All →</button>
+    </div>
+
+  </section>
+
+  <div class="brand-poster">
+    <img src="./image/food2..jpeg" alt="Brands Banner">
+  </div>
+
+  <!-- DAILY PRODUCTS SECTION -->
+  <section class="product-tabs-section">
+
+    <h2 class="section-title">✨ Trending Products</h2>
+
+    <!-- CATEGORY TABS -->
+    <div class="tabs">
+      <button class="tab active" data-tab="snacks">Snacks</button>
+      <button class="tab" data-tab="beverages">Beverages</button>
+      <button class="tab" data-tab="dairy">Dairy</button>
+      <button class="tab" data-tab="personal">Personal Care</button>
+      <button class="tab" data-tab="home">Home Essentials</button>
+    </div>
+
+    <!-- PRODUCTS -->
+    <div class="tab-content active" id="snacks">
+      <div class="product-row">
+
+        <div class="product-card">
+          <span class="wishlist" data-name="Chips Pack" data-price="₹20">♡</span>
+          <div class="product-img"></div>
+          <h3>Chips Pack</h3>
+          <p>100 gm</p>
+          <div class="price"><span class="old">₹30</span> ₹20</div>
+          <button>Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <span class="wishlist" data-name="Biscuits" data-price="₹25">♡</span>
+          <div class="product-img"></div>
+          <h3>Biscuits</h3>
+          <p>200 gm</p>
+          <div class="price"><span class="old">₹40</span> ₹25</div>
+          <button>Add to Cart</button>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="tab-content" id="beverages">
+      <div class="product-row">
+
+        <div class="product-card">
+          <span class="wishlist" data-name="Cold Drink" data-price="₹50">♡</span>
+          <div class="product-img"></div>
+          <h3>Cold Drink</h3>
+          <p>500 ml</p>
+          <div class="price"><span class="old">₹60</span> ₹50</div>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <span class="wishlist" data-name="Chips " data-price="₹20">♡</span>
+          <div class="product-img"></div>
+          <h3>Chips Pack</h3>
+          <p>100 gm</p>
+          <div class="price"><span class="old">₹30</span> ₹20</div>
+          <button>Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <span class="wishlist" data-name="Biscuit" data-price="₹25">♡</span>
+          <div class="product-img"></div>
+          <h3>Biscuits</h3>
+          <p>200 gm</p>
+          <div class="price"><span class="old">₹40</span> ₹25</div>
+          <button>Add to Cart</button>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="tab-content " id="dairy">
+      <div class="product-row">
+
+        <div class="product-card">
+          <span class="wishlist" data-name="Chips Pack" data-price="₹20">♡</span>
+          <div class="product-img"></div>
+          <h3>Chips Pack</h3>
+          <p>100 gm</p>
+          <div class="price"><span class="old">₹30</span> ₹20</div>
+          <button>Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <span class="wishlist" data-name="Biscuits" data-price="₹25">♡</span>
+          <div class="product-img"></div>
+          <h3>Biscuits</h3>
+          <p>200 gm</p>
+          <div class="price"><span class="old">₹40</span> ₹25</div>
+          <button>Add to Cart</button>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+    <div class="tab-content " id="personal">
+      <div class="product-row">
+
+        <div class="product-card">
+          <span class="wishlist" data-name="Chips Pack" data-price="₹20">♡</span>
+          <div class="product-img"></div>
+          <h3>Chips Pack</h3>
+          <p>100 gm</p>
+          <div class="price"><span class="old">₹30</span> ₹20</div>
+          <button>Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <span class="wishlist" data-name="Biscuits" data-price="₹25">♡</span>
+          <div class="product-img"></div>
+          <h3>Biscuits</h3>
+          <p>200 gm</p>
+          <div class="price"><span class="old">₹40</span> ₹25</div>
+          <button>Add to Cart</button>
+        </div>
+
+      </div>
+    </div>
+
+
+
+    <div class="tab-content " id="home">
+      <div class="product-row">
+
+        <div class="product-card">
+          <span class="wishlist" data-name="Chips Pack" data-price="₹20">♡</span>
+          <div class="product-img"></div>
+          <h3>Chips Pack</h3>
+          <p>100 gm</p>
+          <div class="price"><span class="old">₹30</span> ₹20</div>
+          <button>Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <span class="wishlist" data-name="Biscuits" data-price="₹25">♡</span>
+          <div class="product-img"></div>
+          <h3>Biscuits</h3>
+          <p>200 gm</p>
+          <div class="price"><span class="old">₹40</span> ₹25</div>
+          <button>Add to Cart</button>
+        </div>
+
+
+
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:20px;">
+      <button class="view-all">Show All →</button>
+    </div>
+
+  </section>
+
+  <div class="brand-poster">
+    <img src="./image/bev.jpeg" alt="Brands Banner">
+  </div>
+
+  <section class="product-section">
+
+    <h2 class="section-title">🥤 Refreshing Beverages For You</h2>
+
+    <div class="product-row">
+
+      <!-- PRODUCT 1 -->
+      <div class="product-card">
+        <span class="wishlist" data-name="Orange Juice" data-price="₹60">♡</span>
+        <div class="product-img"></div>
+        <h3>Orange Juice</h3>
+        <p>1 litre</p>
+        <div class="price"><span class="old">₹80</span> ₹60</div>
+        <button>Add to Cart</button>
+      </div>
+
+      <!-- PRODUCT 2 -->
+      <div class="product-card">
+        <span class="wishlist" data-name="Cold Coffee" data-price="₹90">♡</span>
+        <div class="product-img"></div>
+        <h3>Cold Coffee</h3>
+        <p>250 ml</p>
+        <div class="price"><span class="old">₹120</span> ₹90</div>
+        <button>Add to Cart</button>
+      </div>
+
+      <!-- PRODUCT 3 -->
+      <div class="product-card">
+        <span class="wishlist" data-name="Energy Drink" data-price="₹110">♡</span>
+        <div class="product-img"></div>
+        <h3>Energy Drink</h3>
+        <p>300 ml</p>
+        <div class="price"><span class="old">₹140</span> ₹110</div>
+        <button>Add to Cart</button>
+      </div>
+
+      <!-- PRODUCT 4 -->
+      <div class="product-card">
+        <span class="wishlist" data-name="Green Tea" data-price="₹150">♡</span>
+        <div class="product-img"></div>
+        <h3>Green Tea</h3>
+        <p>100 gm</p>
+        <div class="price"><span class="old">₹180</span> ₹150</div>
+        <button>Add to Cart</button>
+      </div>
+
+      <!-- PRODUCT 5 -->
+      <div class="product-card">
+        <span class="wishlist" data-name="Soft Drink" data-price="₹45">♡</span>
+        <div class="product-img"></div>
+        <h3>Soft Drink</h3>
+        <p>500 ml</p>
+        <div class="price"><span class="old">₹60</span> ₹45</div>
+        <button>Add to Cart</button>
+      </div>
+
+    </div>
+
+    <div style="text-align:center; margin-top:20px;">
+      <button class="view-all">Show All →</button>
+    </div>
+
+  </section>
+
+  <footer class="footer">
+
+    <div class="footer-container">
+
+      <!-- LEFT -->
+      <div class="footer-left">
+        <h2>Shivam<span>Mart</span></h2>
+
+        <p>
+          Police line road jamui bihar<br>
+
+          bihar - 600044
+        </p>
+
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a> |
+          <a href="#">Refund Policy</a> |
+          <a href="#">Shipping Policy</a> |
+          <a href="#">Terms and Condition</a>
+        </div>
+
+        <p class="copyright">
+          Copyright © 2026 Shivam Mart. All Rights Reserved
+        </p>
+      </div>
+
+      <!-- CENTER -->
+      <div class="footer-center">
+        <h3>Need Help</h3>
+
+        <p class="phone">📞 7305393222 / 04443666333</p>
+
+        <h3 class="mt">Categories</h3>
+
+        <div class="categories">
+          <a href="#">Staples</a> |
+          <a href="#">Snacks</a> |
+          <a href="#">Beverages</a> |
+          <a href="#">Dairy</a> |
+          <a href="#">Ready To Cook</a> |
+          <a href="#">Baby Care</a> |
+          <a href="#">Household</a> |
+          <a href="#">Cleaning</a> |
+          <a href="#">Health Care</a> |
+          <a href="#">Personal Care</a>
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="footer-right">
+        <h3>Links</h3>
+
+        <a href="#">Home</a>
+        <a href="#">Deals</a>
+        <a href="#">New Arrivals</a>
+
+
+      </div>
+
+  </footer>
+  <!-- SCRIPT -->
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>

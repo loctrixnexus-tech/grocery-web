@@ -1,0 +1,72 @@
+/* FAVORITES PAGE */
+.favorites-section {
+  padding: 40px;
+  background: #f8f9fb;
+  min-height: 100vh;
+}
+
+.fav-header h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+/* GRID */
+.fav-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* CARD */
+.fav-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transition: 0.3s;
+}
+
+.fav-card:hover {
+  transform: translateY(-5px);
+}
+
+/* IMAGE */
+.fav-img {
+  height: 150px;
+  background: #f1f1f1;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* TITLE */
+.fav-card h3 {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+/* PRICE */
+.fav-price {
+  font-weight: bold;
+  color: #e63946;
+}
+
+/* REMOVE BUTTON */
+.remove-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: red;
+}
+
+/* EMPTY STATE */
+.empty {
+  text-align: center;
+  font-size: 18px;
+  color: #777;
+  margin-top: 50px;
+}

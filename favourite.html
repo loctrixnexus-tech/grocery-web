@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Favorites</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/fav.css">
+</head>
+<body>
+<div class="top-bar">
+  <div class="top-left" id="locationBtn">
+    📍 Deliver to: <span>Enter Location</span>
+  </div>
+
+  <div class="top-right">
+    📞 Call:+91 62053 38603
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-left">
+    <h2 class="logo">Shivam<span>Mart</span></h2>
+  </div>
+
+  <ul class="nav-links">
+    <li><a href="#">Shop by Category ▾</a></li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#">New Arrivals</a></li>
+  </ul>
+
+  <div class="nav-right">
+    <input type="text" placeholder="Search products..." class="search-box">
+    <button class="search-btn">🔍</button>
+    <div class="wishlist-nav" onclick="openFavorites()">
+  ❤️ <span id="wishlistCount">0</span>
+</div>
+    <div class="cart">🛒</div>
+  </div>
+</nav>
+
+
+<section class="favorites-section">
+
+  <div class="fav-header">
+    <h2>❤️ Favorites</h2>
+  </div>
+
+  <div class="fav-container" id="favContainer">
+    <!-- PRODUCTS WILL LOAD HERE -->
+  </div>
+
+</section>
+
+<script src="js/fav.js"></script>
+</body>
+</html>
