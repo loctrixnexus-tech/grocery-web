@@ -170,10 +170,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ✅ UPDATE COUNT
   function updateCount() {
-    const wishlist=JSON.parse(localStorage.getItem("wishlist"))||[];
+    
     count.innerText = wishlist.length;
   }
-updateCountNavbar();
   // ✅ LOOP ALL ICONS
   icons.forEach(icon => {
 
