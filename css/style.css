@@ -3,7 +3,7 @@ body {
   margin: 0;
   font-family: 'Playfair Display', serif;
   background-color:#f8faf8;
-  background-image: url("/image/bg.png");
+  background-image: url("./image/bg.png");
   background-repeat: repeat;
 background-size: 300px;
 
