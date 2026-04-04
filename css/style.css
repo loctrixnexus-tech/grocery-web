@@ -357,6 +357,7 @@ background-size: 300px;
 
 .hero-text h1 {
   font-size: 32px;
+  margin-bottom: -26px;
 }
 
 .hero-text h2 {
@@ -390,7 +391,7 @@ background-size: 300px;
 /* ICON */
 .sticker-card .icon {
   font-size: 28px;
-  margin-bottom: 10px;
+  margin-bottom: -25px;
 }
 
 /* TITLE */
@@ -402,8 +403,10 @@ background-size: 300px;
 
 /* TEXT */
 .sticker-card p {
-  font-size: 14px;
+  font-size: 18px;
   opacity: 0.9;
+  margin-top: 1px;
+
 }
 
 /* HOVER EFFECT */
@@ -468,9 +471,10 @@ background-size: 300px;
 
 /* IMAGE */
 .shape img {
-  width: 50px;
-  height: 50px;
-  object-fit: contain;
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 /* TEXT */
@@ -1131,4 +1135,131 @@ background-size: 300px;
   .footer-container {
     flex-direction: column;
   }
+}
+
+.nav-item{
+  position:relative;
+  cursor: pointer;
+}
+/* MAIN DROPDOWN */
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 650px;
+  height: auto;
+  background: #ffffff;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  border-radius: 10px;
+  overflow: hidden;
+  animation: fadeIn 0.3s ease;
+  z-index: 999;
+ 
+}
+
+/* SHOW DROPDOWN */
+
+.dropdown.active{
+  display: flex;
+}
+/* LEFT SIDE MENU */
+.left-menu {
+  width: 40%;
+  list-style: none;
+  padding: 10px 0;
+  background: #f7f9fb;
+  border-right: 1px solid #eee;
+}
+
+.left-menu li {
+  padding: 12px 20px;
+  font-size: 15px;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* HOVER EFFECT */
+.left-menu li:hover {
+  background: #e8f5e9;
+  color: #2e7d32;
+  font-weight: 600;
+  transform: translateX(5px);
+}
+
+/* ACTIVE LINE (LEFT SIDE) */
+.left-menu li:hover::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background: #2e7d32;
+  border-radius: 0 5px 5px 0;
+}
+
+/* RIGHT SIDE PANEL */
+.right-menu {
+  width: 60%;
+  padding: 20px;
+  background: #ffffff;
+  animation: slideIn 0.3s ease;
+}
+
+/* RIGHT TITLE */
+.right-menu h4 {
+  margin-bottom: 10px;
+  color: #2e7d32;
+  font-weight: 700;
+}
+
+/* SUBCATEGORY ITEMS */
+.right-menu p {
+  margin: 8px 0;
+  font-size: 14px;
+  color: #555;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* HOVER SUBCATEGORY */
+.right-menu p:hover {
+  color: #2e7d32;
+  font-weight: 600;
+  transform: translateX(5px);
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+#cartCount{
+  background: red;
+  color:white;
+  padding:2px 6px;
+  border-radius:50%;
+  font-size: 12px;
 }
