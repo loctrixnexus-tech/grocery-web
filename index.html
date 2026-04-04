@@ -44,8 +44,45 @@
     </div>
 
     <ul class="nav-links">
-      <li><a href="#">Shop by Category ▾</a></li>
-      <li><a href="#">Home</a></li>
+      <li class="nav-item" id="navToggle">
+        Shop by Category ▼
+
+        <div class="dropdown" id="megaMenu">
+
+          <ul class="left-menu">
+
+            <li onmouseover="showSub('staples')" onclick="goCategory('staples')">Staples</li>
+
+            <li onmouseover="showSub('snacks')" onclick="goCategory('snacks')">Snacks & Packaged Food</li>
+
+            <li onmouseover="showSub('beverages')" onclick="goCategory('beverages')">Beverages</li>
+
+            <li onmouseover="showSub('dairy')" onclick="goCategory('dairy')">Chilled & Dairy Foods</li>
+
+            <li onmouseover="showSub('cook')" onclick="goCategory('cook')">Ready To Cook</li>
+
+            <li onmouseover="showSub('eat')" onclick="goCategory('eat')">Ready To Eat</li>
+
+            <li onmouseover="showSub('baby')" onclick="goCategory('baby')">Baby Care</li>
+
+            <li onmouseover="showSub('house')" onclick="goCategory('house')">Household Essentials</li>
+
+            <li onmouseover="showSub('clean')" onclick="goCategory('clean')">Cleaning Needs</li>
+
+            <li onmouseover="showSub('personal')" onclick="goCategory('personal')">Personal Care</li>
+
+            <li onmouseover="showSub('health')" onclick="goCategory('health')">Health Care</li>
+
+          </ul>
+
+          <div class="right-menu" id="rightMenu">
+            Hover on category
+          </div>
+
+        </div>
+      </li>
+
+      <li><a href="index.html">Home</a></li>
       <li><a href="#">New Arrivals</a></li>
     </ul>
 
@@ -55,7 +92,7 @@
       <div class="wishlist-nav" onclick="openFavorites()">
         ❤️ <span id="wishlistCount">0</span>
       </div>
-      <div class="cart">🛒</div>
+      <div class="cart">🛒<span id="cartCount">0</span></div>
     </div>
   </nav>
 
@@ -149,14 +186,14 @@
 
       <div class="curated-item">
         <div class="shape">
-          <img src="images/dairy.png" alt="">
+          <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
         </div>
         <p>Dairy & Breakfast</p>
       </div>
 
       <div class="curated-item">
         <div class="shape">
-          <img src="images/staples.png" alt="">
+          <img src="https://plus.unsplash.com/premium_photo-1699474641028-0fbbb0413005?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
         </div>
         <p>Staples</p>
       </div>
@@ -213,9 +250,10 @@
 
     <h2 class="section-title">Shop By Category</h2>
 
+
     <div class="category-grid">
 
-      <div class="category-card">
+      <div class="category-card" onclick="goToCategory('staples')">
         <img src="https://images.unsplash.com/photo-1606788075761-0c5c5f64d6d8">
         <p>Staples</p>
       </div>
@@ -333,7 +371,7 @@
           <span class="new">₹40</span>
         </div>
 
-        <button>Add to Cart</button>
+        <button onclick="addToCart('Instant Noodles',40,'')">Add to Cart</button>
 
       </div>
 
@@ -661,7 +699,7 @@
       <div class="footer-right">
         <h3>Links</h3>
 
-        <a href="#">Home</a>
+        <a href="index.html">Home</a>
         <a href="#">Deals</a>
         <a href="#">New Arrivals</a>
 
@@ -670,8 +708,22 @@
 
   </footer>
   <!-- SCRIPT -->
-  <script src="js/script.js"></script>
+    <script src="js/script.js"></script>
+ 
+  <script>
+    function goToCategory(category) {
+      window.location.href = "category.html?cat=" + category;
+    }
+  </script>
+
+
+  <div id="cartBar" class="cart-bar">
+  <span id="cartInfo">0 item(s) | ₹0</span>
+  <button onclick="goToCart()">View Cart</button>
+</div>
+
+
+
 
 </body>
-
 </html>
