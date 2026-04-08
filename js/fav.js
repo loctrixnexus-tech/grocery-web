@@ -2,7 +2,6 @@ const container = document.getElementById("favContainer");
 
 let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
 
-// RENDER PRODUCTS
 function renderFavorites() {
 
   container.innerHTML = "";
@@ -15,38 +14,44 @@ function renderFavorites() {
   wishlist.forEach((item, index) => {
 
     const card = document.createElement("div");
-    card.classList.add("fav-card");
+    card.classList.add("product-card");
 
     card.innerHTML = `
-      <button class="remove-btn" data-index="${index}">🗑️</button>
+      
+      <span class="remove-btn" data-index="${index}">🗑️</span>
 
-      <div class="fav-img"></div>
+      <span class="wishlist active">❤️</span>
+
+      <img src="${item.img}" class="product-img">
 
       <h3>${item.name}</h3>
-      <p class="fav-price">${item.price}</p>
 
-      <button class="add-btn">Add to Cart</button>
+      <p class="weight">${item.qty}</p>
+
+      <div class="price">
+        <span class="old">₹${item.old}</span>
+        <span class="new">₹${item.price}</span>
+      </div>
+
+      <div class="cart-controls">
+        <button onclick="addToCart(this, '${item.name}', ${item.price}, '${item.img}', ${item.old}, '${item.qty}')">
+          Add to Cart
+        </button>
+      </div>
     `;
 
     container.appendChild(card);
   });
 }
 
-// REMOVE ITEM
+// REMOVE
 container.addEventListener("click", (e) => {
-
   if (e.target.classList.contains("remove-btn")) {
-
     const index = e.target.dataset.index;
-
     wishlist.splice(index, 1);
-
     localStorage.setItem("wishlist", JSON.stringify(wishlist));
-
     renderFavorites();
   }
-
 });
 
-// INIT
 renderFavorites();
