@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Category Page</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/cat.css">
+</head>
+
+<body>
+<div class="top-bar">
+    <div class="top-left" id="locationBtn">
+      📍 Deliver to: <span>Enter Location</span>
+    </div>
+
+    <div class="top-right">
+      📞 Call:+91 62053 38603
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <h2 class="logo">Shivam<span>Mart</span></h2>
+    </div>
+
+    <ul class="nav-links">
+      <li class="nav-item" id="navToggle">
+        Shop by Category ▼
+
+        <div class="dropdown" id="megaMenu">
+
+          <ul class="left-menu">
+
+            <li onmouseover="showSub('staples')" onclick="goCategory('staples')">Staples</li>
+
+            <li onmouseover="showSub('snacks')" onclick="goCategory('snacks')">Snacks & Packaged Food</li>
+
+            <li onmouseover="showSub('beverages')" onclick="goCategory('beverages')">Beverages</li>
+
+            <li onmouseover="showSub('dairy')" onclick="goCategory('dairy')">Chilled & Dairy Foods</li>
+
+            <li onmouseover="showSub('cook')" onclick="goCategory('cook')">Ready To Cook</li>
+
+
+            <li onmouseover="showSub('baby')" onclick="goCategory('baby')">Baby Care</li>
+
+            <li onmouseover="showSub('house')" onclick="goCategory('house')">Household Essentials</li>
+
+            <li onmouseover="showSub('clean')" onclick="goCategory('clean')">Cleaning Needs</li>
+
+            <li onmouseover="showSub('personal')" onclick="goCategory('personal')">Personal Care</li>
+
+            <li onmouseover="showSub('health')" onclick="goCategory('health')">Health Care</li>
+
+          </ul>
+
+          <div class="right-menu" id="rightMenu">
+            Hover on category
+          </div>
+
+        </div>
+      </li>
+
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">New Arrivals</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <input type="text" placeholder="Search products..." class="search-box">
+      <button class="search-btn">🔍</button>
+      <div class="wishlist-nav" onclick="window.location.href='favourite.html'">
+        ❤️ <span id="wishlistCount">0</span>
+      </div>
+      <div class="cart" onclick="goToCart()">🛒<span id="cartCount">0</span></div>
+    </div>
+  </nav>
+
+
+
+  <div class="category-container">
+
+    <!-- LEFT SIDEBAR -->
+    <div class="sidebar">
+
+      <h3>Categories</h3>
+
+      <!-- STAPLES -->
+      <div class="category">
+        <div class="category-title" onclick="toggleSub(this)">
+          Staples <span class="arrow">▶</span>
+        </div>
+
+        <div class="subcategory">
+
+
+          <p onclick="loadProducts('cereals')">Cereals & Dals</p>
+          <p onclick="loadProducts('masala')">Masalas & Spices</p>
+          <p onclick="loadProducts('oil')">Edible Oil & Ghee</p>
+          <p onclick="loadProducts('dryfruits')">Dry Fruits & Nuts</p>
+          <p onclick="loadProducts('flours')">Flours</p>
+          <p onclick="loadProducts('salt')">Salt & Sugar</p>
+
+        </div>
+      </div>
+
+      <!-- BEVERAGES -->
+      <div class="category">
+        <div class="category-title" onclick="toggleSub(this)">
+          Beverages <span class="arrow">▶</span>
+        </div>
+
+        <div class="subcategory">
+
+          <p onclick="loadProducts('drinks')">Drinks & Juices</p>
+          <p onclick="loadProducts('tea')">Tea & Coffee</p>
+          <p onclick="loadProducts('health')">Health Drinks</p>
+          <p onclick="loadProducts('soft')">Energy & Soft Drinks</p>
+          <p onclick="loadProducts('milk')">Milk Powder</p>
+          <p onclick="loadProducts('mixes')">Drink Mixes</p>
+          <p onclick="loadProducts('water')">Mineral Water</p>
+
+        </div>
+      </div>
+
+      <!-- SNACKS -->
+      <div class="category">
+        <div class="category-title" onclick="toggleSub(this)">
+          Snacks & Namkeens <span class="arrow">▶</span>
+        </div>
+
+        <div class="subcategory">
+
+          <p onclick="loadProducts('chocolates')">Chocolates & Candies</p>
+          <p onclick="loadProducts('biscuits')">Biscuits & Cookies</p>
+          <p onclick="loadProducts('snacks')">Branded Snacks</p>
+          <p onclick="loadProducts('bakery')">Bakery</p>
+          <p onclick="loadProducts('mints')">Mints & Chewing Gum</p>
+
+        </div>
+      </div>
+
+      <div class="category">
+        <div class="category-title" onclick="toggleSub(this)">
+          Chilled & Dairy Foods <span class="arrow">▶</span>
+        </div>
+
+        <div class="subcategory">
+
+          <p onclick="loadProducts('butter')">Butter & Cheese</p>
+          <p onclick="loadProducts('paneer')">Paneer</p>
+          <p onclick="loadProducts('milk')">Milk & Curd</p>
+          <p onclick="loadProducts('icecream')">Ice Creams</p>
+          <p onclick="loadProducts('frozen')">Frozen Foods</p>
+          <p onclick="loadProducts('otherdairy')">Other Dairy</p>
+
+        </div>
+      </div>
+      <div class="category">
+        <div class="category-title" onclick="toggleSub(this)">
+          Ready To Cook <span class="arrow">▶</span>
+        </div>
+
+        <div class="subcategory">
+
+          <p onclick="loadProducts('noodles')">Noodles & Vermicelli</p>
+          <p onclick="loadProducts('papad')">Appalam & Papads</p>
+          <p onclick="loadProducts('pasta')">Pasta & Macaroni</p>
+          <p onclick="loadProducts('mix')">Instant Mixes</p>
+          <p onclick="loadProducts('soup')">Soups</p>
+
+        </div>
+      </div>
+
+      <div class="category">
+        <div class="category-title" onclick="toggleSub(this)">
+          Baby Care <span class="arrow">▶</span>
+        </div>
+
+        <div class="subcategory">
+
+          <p onclick="loadProducts('diapers')">Diapers & Wipes</p>
+          <p onclick="loadProducts('soap')">Baby Soap</p>
+          <p onclick="loadProducts('shampoo')">Baby Shampoo</p>
+          <p onclick="loadProducts('food')">Baby Foods</p>
+          <p onclick="loadProducts('accessories')">Baby Accessories</p>
+          <p onclick="loadProducts('otherbaby')">Other Baby Needs</p>
+
+        </div>
+      </div>
+
+      <div class="category">
+        <div class="category-title" onclick="toggleSub(this)">
+          Household Essentials <span class="arrow">▶</span>
+        </div>
+
+        <div class="subcategory">
+
+          <p onclick="loadProducts('fresheners')">Fresheners & Repellents</p>
+          <p onclick="loadProducts('paper')">Paper Goods & Disposables</p>
+          <p onclick="loadProducts('pooja')">Pooja Needs</p>
+          <p onclick="loadProducts('pet')">Pet Care</p>
+          <p onclick="loadProducts('shoe')">Shoe Care</p>
+          <p onclick="loadProducts('electrical')">Basic Electricals</p>
+          <p onclick="loadProducts('otherhouse')">Other Household Needs</p>
+
+        </div>
+      </div>
+
+      <div class="category">
+        <div class="category-title" onclick="toggleSub(this)">
+          Cleaning Needs <span class="arrow">▶</span>
+        </div>
+
+        <div class="subcategory">
+          <p onclick="loadProducts('detergent')">Detergents</p>
+          <p onclick="loadProducts('conditioner')">Fabric Conditioners</p>
+          <p onclick="loadProducts('dishwash')">Dishwash Cleaners</p>
+          <p onclick="loadProducts('allclean')">All Purpose Cleaners</p>
+          <p onclick="loadProducts('floor')">Floor & Toilet Cleaners</p>
+        </div>
+      </div>
+      <div class="category">
+        <div class="category-title" onclick="toggleSub(this)">
+          Personal Care <span class="arrow">▶</span>
+        </div>
+
+        <div class="subcategory">
+
+          <p onclick="loadProducts('hair')">Hair Oil & Colour</p>
+          <p onclick="loadProducts('shampoo')">Shampoo & Conditioner</p>
+          <p onclick="loadProducts('handwash')">Hand Wash & Sanitizers</p>
+          <p onclick="loadProducts('otherhair')">Other Hair Care</p>
+          <p onclick="loadProducts('lotion')">Body Lotion</p>
+          <p onclick="loadProducts('perfume')">Perfumes / Deos</p>
+
+        </div>
+      </div>
+      <div class="category">
+        <div class="category-title" onclick="toggleSub(this)">
+          Health Care <span class="arrow">▶</span>
+        </div>
+
+        <div class="subcategory">
+
+          <p onclick="loadProducts('adult')">Adult Diapers</p>
+          <p onclick="loadProducts('sugarfree')">Sugar Free</p>
+          <p onclick="loadProducts('pain')">Pain Balms & Creams</p>
+          <p onclick="loadProducts('mask')">Face Mask & Gloves</p>
+          <p onclick="loadProducts('otherhealth')">Other Health Care</p>
+
+        </div>
+      </div><!-- ADD OTHER CATEGORIES SAME WAY -->
+
+    </div>
+
+    <div class="products-section">
+      <h2 id="pageTitle" class="page-title">All Products</h2>
+
+
+      <!-- RIGHT SIDE PRODUCTS -->
+      <div class="products" id="products"></div>
+    </div>
+  </div>
+
+
+    <div id="cartBar" class="cart-bar">
+    <span id="cartInfo">0 item(s) | ₹0</span>
+    <button onclick="goToCart()">View Cart</button>
+  </div>
+
+  <script src="js/cat.js"></script>
+  <script src="js/script.js"></script>
+   <a href="https://wa.me/916205338603?text=Hello%20I%20want%20to%20place%20an%20order"
+   class="whatsapp-btn"
+   target="_blank">
+
+    <span>Click to chat</span>
+
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="whatsapp">
+</body>
+
+</html>
