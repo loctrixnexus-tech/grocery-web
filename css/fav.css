@@ -1,72 +1,166 @@
-/* FAVORITES PAGE */
-.favorites-section {
-  padding: 40px;
-  background: #f8f9fb;
-  min-height: 100vh;
+/* MAIN CONTAINER */
+#favContainer {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: px;
+  padding: 20px;
 }
 
-.fav-header h2 {
-  font-size: 26px;
-  margin-bottom: 20px;
-}
-
-/* GRID */
-.fav-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 20px;
-}
-
-/* CARD */
-.fav-card {
+/* PRODUCT CARD */
+.product-card {
   background: #fff;
-  border-radius: 12px;
+  border-radius: 10px;
   padding: 15px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   position: relative;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
   transition: 0.3s;
+  width:36px;
+  margin-left: 83px;
+  margin-top: 10px;
+  
 }
 
-.fav-card:hover {
+.product-card:hover {
   transform: translateY(-5px);
 }
 
-/* IMAGE */
-.fav-img {
-  height: 150px;
-  background: #f1f1f1;
-  border-radius: 10px;
-  margin-bottom: 10px;
+/* IMAGE FIX */
+.product-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
-/* TITLE */
-.fav-card h3 {
+/* TEXT */
+.product-card h3 {
   font-size: 16px;
-  margin: 5px 0;
+  margin: 10px 0 5px;
+}
+
+.weight {
+  font-size: 13px;
+  color: gray;
 }
 
 /* PRICE */
-.fav-price {
-  font-weight: bold;
-  color: #e63946;
+.price {
+  margin: 8px 0;
 }
 
-/* REMOVE BUTTON */
+.price .old {
+  text-decoration: line-through;
+  color: gray;
+  margin-right: 5px;
+}
+
+.price .new {
+  color: #e91e63;
+  font-weight: bold;
+}
+
+/* BUTTON */
+.cart-controls button {
+  width: 100%;
+  padding: 10px;
+  background: #e91e63;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* REMOVE BTN */
 .remove-btn {
   position: absolute;
   top: 10px;
   right: 10px;
-  background: #fff;
-  border: none;
   cursor: pointer;
-  font-size: 18px;
-  color: red;
 }
 
-/* EMPTY STATE */
-.empty {
-  text-align: center;
-  font-size: 18px;
-  color: #777;
-  margin-top: 50px;
+/* ===== FAVORITES GRID FIX ===== */
+@media (max-width: 768px) {
+
+  #favContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 🔥 2 per row */
+    gap: 12px;
+    padding: 10px;
+  }
+
+  #favContainer .product-card {
+    width: 100%;
+    min-width: unset;
+    padding: 10px;
+    text-align: center;
+  }
+
+  #favContainer .product-img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+  }
+
+  #favContainer h3 {
+    font-size: 14px;
+  }
+
+  #favContainer p {
+    font-size: 12px;
+  }
+
+  #favContainer button {
+    width: 100%;
+    font-size: 13px;
+    padding: 6px;
+  }
+
+}
+
+/* ===== ALL PRODUCTS 2 PER ROW (MOBILE) ===== */
+/* ===== GLOBAL OVERFLOW FIX ===== */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* ===== PRODUCTS FIX ===== */
+@media (max-width: 768px) {
+
+  #favContainer,
+  .products,
+  .product-row {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+    margin: 0 !important;
+  }
+
+  .product-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 10px;
+  }
+
+  .product-img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+  }
+
+  /* 🔥 IMPORTANT FIX (this is your main issue) */
+  section,
+  .categories,
+  .product-section {
+    margin: 0 !important;
+    padding: 10px !important;
+  }
+
 }
