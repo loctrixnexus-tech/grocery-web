@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shivam Mart</title>
 
   <!-- GOOGLE FONTS -->
@@ -14,25 +14,18 @@
 
 <body>
   <div class="wishlist-popup" id="wishlistPopup">
-
     <div class="wishlist-box">
       <h2>Your Wishlist</h2>
       <span class="close-wishlist" id="closeWishlist">✖</span>
-
       <div id="wishlistItems"></div>
-
     </div>
-
   </div>
 
   <!-- TOP BAR -->
   <div class="top-bar">
     <div class="top-left" id="locationBtn">
-      
       📍 Deliver to: <span>Enter Location</span>
     </div>
-
-    
 
     <div class="top-right">
       📞 Call:+91 62053 38603
@@ -40,8 +33,8 @@
   </div>
 
   <!-- NAVBAR -->
- 
-  
+
+
 
 
   <nav class="navbar">
@@ -57,25 +50,15 @@
 
           <ul class="left-menu">
 
-            <li onmouseover="showSub('staples')" onclick="goCategory('staples')">Staples</li>
-
+            <li onmouseover="showSub('staples')" onclick="goCategory('staples')">Daily Food items </li>
             <li onmouseover="showSub('snacks')" onclick="goCategory('snacks')">Snacks & Packaged Food</li>
-
-            <li onmouseover="showSub('beverages')" onclick="goCategory('beverages')">Beverages</li>
-
+            <li onmouseover="showSub('beverages')" onclick="goCategory('beverages')">Drinks</li>
             <li onmouseover="showSub('dairy')" onclick="goCategory('dairy')">Chilled & Dairy Foods</li>
-
             <li onmouseover="showSub('cook')" onclick="goCategory('cook')">Ready To Cook</li>
-
-
             <li onmouseover="showSub('baby')" onclick="goCategory('baby')">Baby Care</li>
-
             <li onmouseover="showSub('house')" onclick="goCategory('house')">Household Essentials</li>
-
             <li onmouseover="showSub('clean')" onclick="goCategory('clean')">Cleaning Needs</li>
-
             <li onmouseover="showSub('personal')" onclick="goCategory('personal')">Personal Care</li>
-
             <li onmouseover="showSub('health')" onclick="goCategory('health')">Health Care</li>
 
           </ul>
@@ -94,6 +77,7 @@
     <div class="nav-right">
       <input type="text" placeholder="Search products..." class="search-box">
       <button class="search-btn">🔍</button>
+
       <div class="wishlist-nav" onclick="openFavorites()">
         ❤️ <span id="wishlistCount">0</span>
       </div>
@@ -115,9 +99,7 @@
         <label><input type="radio" name="type" checked> Delivery</label>
         <label><input type="radio" name="type"> Pickup</label>
       </div>
-
       <p>Where do you want us to deliver?</p>
-
       <!-- INPUT AREA -->
       <div class="location-input">
         <button class="current-btn" id="currentLocationBtn">📍 Use Current Location</button>
@@ -156,9 +138,7 @@
       </div>
     </div>
 
-    <!-- OFFER BAR -->
-    <!-- ===== PREMIUM INFO CARD ===== -->
-    <!-- ===== PREMIUM STICKERS SECTION ===== -->
+
     <div class="sticker-section">
 
       <!-- STICKER 1 -->
@@ -204,7 +184,7 @@
             src="https://plus.unsplash.com/premium_photo-1699474641028-0fbbb0413005?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="">
         </div>
-        <p>Staples</p>
+        <p>Daily Food Items</p>
       </div>
 
 
@@ -223,7 +203,7 @@
             src="https://images.unsplash.com/photo-1609951651556-5334e2706168?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="">
         </div>
-        <p>Beverages</p>
+        <p>Drinks</p>
       </div>
 
       <div class="curated-item">
@@ -276,7 +256,7 @@
       <div class="category-card" onclick="goToCategory('staples')">
         <img
           src="https://images.unsplash.com/photo-1626500154744-e4b394ffea16?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
-        <p>Staples</p>
+        <p>Daily Food items</p>
       </div>
 
       <div class="category-card" onclick="goToCategory('snacks')">
@@ -288,7 +268,7 @@
       <div class="category-card" onclick="goToCategory('beverages')">
         <img
           src="https://plus.unsplash.com/premium_photo-1691939610599-a9a3dde8e810?q=80&w=725&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
-        <p>Beverages</p>
+        <p>Drinks</p>
       </div>
 
       <div class="category-card" onclick="goToCategory('dairy')">
@@ -384,7 +364,9 @@
       <!-- PRODUCT CARD -->
       <div class="product-card">
 
-        <span class="wishlist" data-name="Instant Noodles" data-price="40" data-img="https://images.unsplash.com/photo-1654245269903-2894c6eb49c4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"  data-old="50" data-qty="200 gm">♡</span>
+        <span class="wishlist" data-name="Instant Noodles" data-price="40"
+          data-img="https://images.unsplash.com/photo-1654245269903-2894c6eb49c4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          data-old="50" data-qty="200 gm">♡</span>
 
         <img
           src="https://images.unsplash.com/photo-1654245269903-2894c6eb49c4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -397,16 +379,17 @@
           <span class="old">₹50</span>
           <span class="new">₹40</span>
         </div>
-      <button onclick="handleAddToCart(this)">Add to Cart</button>
+        <button onclick="handleAddToCart(this)">Add to Cart</button>
 
       </div>
 
       <!-- COPY SAME CARD -->
       <div class="product-card">
-        <span class="wishlist" data-name="pasta" data-price="99" data-img="https://images.unsplash.com/photo-1737718952107-be42ec98a028?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" data-old="120">♡</span>
+        <span class="wishlist" data-name="pasta" data-price="99"
+          data-img="https://images.unsplash.com/photo-1737718952107-be42ec98a028?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          data-old="120">♡</span>
         <img
           src="https://images.unsplash.com/photo-1737718952107-be42ec98a028?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-
           class="product-img">
         <h3>Pasta Pack</h3>
         <p class="weight">250 gm</p>
@@ -420,7 +403,9 @@
       </div>
 
       <div class="product-card">
-        <span class="wishlist" data-name="dosa" data-price="65" data-img="" data-old="">♡</span>
+        <span class="wishlist" data-name="dosa" data-price="65"
+          data-img="https://images.pexels.com/photos/6287550/pexels-photo-6287550.jpeg?_gl=1*1ovn9zv*_ga*NTY0Mzg3MTAzLjE3NzUzMjgxODQ.*_ga_8JE65Q40S6*czE3NzUzMjgxODQkbzEkZzEkdDE3NzUzMjg0NjkkajkkbDAkaDA."
+          data-old="80">♡</span>
         <img
           src="https://images.pexels.com/photos/6287550/pexels-photo-6287550.jpeg?_gl=1*1ovn9zv*_ga*NTY0Mzg3MTAzLjE3NzUzMjgxODQ.*_ga_8JE65Q40S6*czE3NzUzMjgxODQkbzEkZzEkdDE3NzUzMjg0NjkkajkkbDAkaDA."
           class="product-img">
@@ -431,13 +416,15 @@
           <span class="new">₹65</span>
         </div>
         <div class="cart-controls">
-           <button onclick="handleAddToCart(this)">Add to Cart</button>
+          <button onclick="handleAddToCart(this)">Add to Cart</button>
         </div>
       </div>
 
 
       <div class="product-card">
-        <span class="wishlist" data-name="soup" data-price="₹45" data-img="" data-old="">♡</span>
+        <span class="wishlist" data-name="soup" data-price="45"
+          data-img="https://images.pexels.com/photos/18148489/pexels-photo-18148489.jpeg?_gl=1*1h8jgrn*_ga*NTY0Mzg3MTAzLjE3NzUzMjgxODQ.*_ga_8JE65Q40S6*czE3NzUzMjgxODQkbzEkZzEkdDE3NzUzMjg2MjgkajQ5JGwwJGgw"
+          data-old="60">♡</span>
         <img
           src="https://images.pexels.com/photos/18148489/pexels-photo-18148489.jpeg?_gl=1*1h8jgrn*_ga*NTY0Mzg3MTAzLjE3NzUzMjgxODQ.*_ga_8JE65Q40S6*czE3NzUzMjgxODQkbzEkZzEkdDE3NzUzMjg2MjgkajQ5JGwwJGgw"
           class="product-img">
@@ -474,7 +461,7 @@
     <!-- CATEGORY TABS -->
     <div class="tabs">
       <button class="tab active" data-tab="snacks">Snacks</button>
-      <button class="tab" data-tab="beverages">Beverages</button>
+      <button class="tab" data-tab="beverages">Drinks</button>
       <button class="tab" data-tab="dairy">Dairy</button>
       <button class="tab" data-tab="personal">Personal Care</button>
       <button class="tab" data-tab="home">Home Essentials</button>
@@ -485,7 +472,9 @@
       <div class="product-row">
 
         <div class="product-card">
-          <span class="wishlist" data-name="Chips Pack" data-price="₹20" data-img="" data-old="">♡</span>
+          <span class="wishlist" data-name="Chips Pack" data-price="20"
+            data-img="https://images.unsplash.com/photo-1748765968997-ba9bae9cfd7b?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            data-old="30">♡</span>
           <img
             src="https://images.unsplash.com/photo-1748765968997-ba9bae9cfd7b?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             class="product-img">
@@ -493,14 +482,16 @@
           <p>100 gm</p>
           <div class="price"><span class="old">₹30</span> ₹20</div>
           <div class="cart-controls">
-             <button onclick="handleAddToCart(this)">Add to Cart</button>
+            <button onclick="handleAddToCart(this)">Add to Cart</button>
 
           </div>
         </div>
 
 
         <div class="product-card">
-          <span class="wishlist" data-name="Biscuits" data-price="₹25" data-img="" data-old="">♡</span>
+          <span class="wishlist" data-name="Biscuits" data-price="25"
+            data-img="https://images.pexels.com/photos/19282222/pexels-photo-19282222.jpeg?_gl=1*ae7mvm*_ga*NTY0Mzg3MTAzLjE3NzUzMjgxODQ.*_ga_8JE65Q40S6*czE3NzUzMjgxODQkbzEkZzEkdDE3NzUzMjg4ODUkajI4JGwwJGgw"
+            data-old="40">♡</span>
           <img
             src="https://images.pexels.com/photos/19282222/pexels-photo-19282222.jpeg?_gl=1*ae7mvm*_ga*NTY0Mzg3MTAzLjE3NzUzMjgxODQ.*_ga_8JE65Q40S6*czE3NzUzMjgxODQkbzEkZzEkdDE3NzUzMjg4ODUkajI4JGwwJGgw"
             class="product-img">
@@ -510,34 +501,39 @@
           <div class="cart-controls">
             <button onclick="handleAddToCart(this)">Add to Cart</button>
           </div>
- </div>
+        </div>
 
 
-      </div></div>
+      </div>
+    </div>
 
 
-      <div class="tab-content" id="beverages">
-        <div class="product-row">
+    <div class="tab-content" id="beverages">
+      <div class="product-row">
 
 
-          <div class="product-card">
-            <span class="wishlist" data-name="Orange Juice" data-price="₹60" data-img="" data-old="">♡</span>
-            <img
-              src="https://images.unsplash.com/photo-1640213505284-21352ee0d76b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              class="product-img">
-            <h3>Orange Juice</h3>
-            <p>1 litre</p>
-            <div class="price"><span class="old">₹80</span> ₹60</div>
-            <div class="cart-controls">
-              <button onclick="handleAddToCart(this)">Add to Cart</button>
-            </div>
-
+        <div class="product-card">
+          <span class="wishlist" data-name="Orange Juice" data-price="60"
+            data-img="https://images.unsplash.com/photo-1640213505284-21352ee0d76b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            data-old="80">♡</span>
+          <img
+            src="https://images.unsplash.com/photo-1640213505284-21352ee0d76b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            class="product-img">
+          <h3>Orange Juice</h3>
+          <p>1 litre</p>
+          <div class="price"><span class="old">₹80</span> ₹60</div>
+          <div class="cart-controls">
+            <button onclick="handleAddToCart(this)">Add to Cart</button>
           </div>
-        
+
+        </div>
+
 
         <!-- PRODUCT 2 -->
         <div class="product-card">
-          <span class="wishlist" data-name="Cold Coffee" data-price="₹90" data-img="" data-old=""></span> >♡</span>
+          <span class="wishlist" data-name="Cold Coffee" data-price="90"
+            data-img="https://images.unsplash.com/photo-1621374571085-9e90cb0ec8fd?q=80&w=679&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            data-old="120"></span> ♡</span>
           <img
             src="https://images.unsplash.com/photo-1621374571085-9e90cb0ec8fd?q=80&w=679&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             class="product-img">
@@ -545,14 +541,16 @@
           <p>250 ml</p>
           <div class="price"><span class="old">₹120</span> ₹90</div>
           <div class="cart-controls">
-          <button onclick="handleAddToCart(this)">Add to Cart</button>
+            <button onclick="handleAddToCart(this)">Add to Cart</button>
           </div>
         </div>
 
 
         <!-- PRODUCT 3 -->
         <div class="product-card">
-          <span class="wishlist" data-name="Energy Drink" data-price="₹110" data-img="" data-old=""></span>>♡</span>
+          <span class="wishlist" data-name="Energy Drink" data-price="110"
+            data-img="https://images.unsplash.com/photo-1612094485240-e6249b81c0cc?q=80&w=703&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            data-old="140"></span>♡</span>
           <img
             src="https://images.unsplash.com/photo-1612094485240-e6249b81c0cc?q=80&w=703&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             class="product-img">
@@ -565,32 +563,33 @@
         </div>
 
       </div>
-      </div>
+    </div>
 
 
 
-
-
-      <div class="tab-content " id="dairy">
-        <div class="product-row">
-
-          <div class="product-card">
-            <span class="wishlist" data-name="Chips Pack" data-price="₹20" data-img="" data-old=""></span>>♡</span>
-            <img
-              src="https://images.unsplash.com/photo-1635436338433-89747d0ca0ef?q=80&w=943&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              class="product-img">
-            <h3>Milk</h3>
-            <p>100 gm</p>
-            <div class="price"><span class="old">₹30</span> ₹20</div>
-            <div class="cart-controls">
-              <button onclick="handleAddToCart(this)">Add to Cart</button>
-            </div>
-
-          </div>
-        
+    <div class="tab-content " id="dairy">
+      <div class="product-row">
 
         <div class="product-card">
-          <span class="wishlist" data-name="Biscuits" data-price="₹25" data-img="" data-old=""></span>>♡</span>
+          <span class="wishlist" data-name="Chips Pack" data-price="20"
+            data-img="https://images.unsplash.com/photo-1635436338433-89747d0ca0ef?q=80&w=943&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            data-old="30"></span>>♡</span>
+          <img
+            src="https://images.unsplash.com/photo-1635436338433-89747d0ca0ef?q=80&w=943&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            class="product-img">
+          <h3>Milk</h3>
+          <p>100 gm</p>
+          <div class="price"><span class="old">₹30</span> ₹20</div>
+          <div class="cart-controls">
+            <button onclick="handleAddToCart(this)">Add to Cart</button>
+          </div>
+        </div>
+
+
+        <div class="product-card">
+          <span class="wishlist" data-name="Biscuits" data-price="25"
+            data-img="https://images.pexels.com/photos/19460144/pexels-photo-19460144.jpeg?_gl=1*2dkozm*_ga*NTY0Mzg3MTAzLjE3NzUzMjgxODQ.*_ga_8JE65Q40S6*czE3NzUzMjgxODQkbzEkZzEkdDE3NzUzMjk5NDYkajQ5JGwwJGgw"
+            data-old="100"></span>>♡</span>
           <img
             src="https://images.pexels.com/photos/19460144/pexels-photo-19460144.jpeg?_gl=1*2dkozm*_ga*NTY0Mzg3MTAzLjE3NzUzMjgxODQ.*_ga_8JE65Q40S6*czE3NzUzMjgxODQkbzEkZzEkdDE3NzUzMjk5NDYkajQ5JGwwJGgw"
             class="product-img">
@@ -598,9 +597,8 @@
           <p>200 gm</p>
           <div class="price"><span class="old">₹100</span> ₹80</div>
           <div class="cart-controls">
-          <button onclick="handleAddToCart(this)">Add to Cart</button>
+            <button onclick="handleAddToCart(this)">Add to Cart</button>
           </div>
-
         </div>
       </div>
     </div>
@@ -610,7 +608,9 @@
       <div class="product-row">
 
         <div class="product-card">
-          <span class="wishlist" data-name="Chips Pack" data-price="₹20" data-img="" data-old=""></span>>♡</span>
+          <span class="wishlist" data-name="Chips Pack" data-price="20"
+            data-img="https://images.pexels.com/photos/14267487/pexels-photo-14267487.jpeg?_gl=1*xtukrs*_ga*NTY0Mzg3MTAzLjE3NzUzMjgxODQ.*_ga_8JE65Q40S6*czE3NzUzMjgxODQkbzEkZzEkdDE3NzUzMjk5ODMkajEyJGwwJGgw"
+            data-old="30"></span>>♡</span>
           <img
             src="https://images.pexels.com/photos/14267487/pexels-photo-14267487.jpeg?_gl=1*xtukrs*_ga*NTY0Mzg3MTAzLjE3NzUzMjgxODQ.*_ga_8JE65Q40S6*czE3NzUzMjgxODQkbzEkZzEkdDE3NzUzMjk5ODMkajEyJGwwJGgw"
             class="product-img">
@@ -618,26 +618,26 @@
           <p>100 gm</p>
           <div class="price"><span class="old">₹30</span> ₹20</div>
           <div class="cart-controls">
-           <button onclick="handleAddToCart(this)">Add to Cart</button>
+            <button onclick="handleAddToCart(this)">Add to Cart</button>
           </div>
-
         </div>
-      
 
-      <div class="product-card">
-        <span class="wishlist" data-name="Biscuits" data-price="₹25" data-img="" data-old=""></span>>♡</span>
-        <img
-          src="https://images.pexels.com/photos/31401740/pexels-photo-31401740.jpeg?_gl=1*bwyfqb*_ga*NTY0Mzg3MTAzLjE3NzUzMjgxODQ.*_ga_8JE65Q40S6*czE3NzUzMjgxODQkbzEkZzEkdDE3NzUzMzAwMzIkajQxJGwwJGgw"
-          class="product-img">
-        <h3>Hair Oil</h3>
-        <p>200 gm</p>
-        <div class="price"><span class="old">₹40</span> ₹25</div>
-        <div class="cart-controls">
-         <button onclick="handleAddToCart(this)">Add to Cart</button>
+
+        <div class="product-card">
+          <span class="wishlist" data-name="Biscuits" data-price="25"
+            data-img="https://images.pexels.com/photos/31401740/pexels-photo-31401740.jpeg?_gl=1*bwyfqb*_ga*NTY0Mzg3MTAzLjE3NzUzMjgxODQ.*_ga_8JE65Q40S6*czE3NzUzMjgxODQkbzEkZzEkdDE3NzUzMzAwMzIkajQxJGwwJGgw"
+            data-old="40"></span>>♡</span>
+          <img
+            src="https://images.pexels.com/photos/31401740/pexels-photo-31401740.jpeg?_gl=1*bwyfqb*_ga*NTY0Mzg3MTAzLjE3NzUzMjgxODQ.*_ga_8JE65Q40S6*czE3NzUzMjgxODQkbzEkZzEkdDE3NzUzMzAwMzIkajQxJGwwJGgw"
+            class="product-img">
+          <h3>Hair Oil</h3>
+          <p>200 gm</p>
+          <div class="price"><span class="old">₹40</span> ₹25</div>
+          <div class="cart-controls">
+            <button onclick="handleAddToCart(this)">Add to Cart</button>
+          </div>
         </div>
       </div>
-
-    </div>
     </div>
 
 
@@ -646,7 +646,9 @@
       <div class="product-row">
 
         <div class="product-card">
-          <span class="wishlist" data-name="Chips Pack" data-price="₹20" data-img="" data-old=""></span>>♡</span>
+          <span class="wishlist" data-name="Chips Pack" data-price="20"
+            data-img="https://images.pexels.com/photos/36569357/pexels-photo-36569357.jpeg?_gl=1*199zlti*_ga*NTY0Mzg3MTAzLjE3NzUzMjgxODQ.*_ga_8JE65Q40S6*czE3NzUzMjgxODQkbzEkZzEkdDE3NzUzMzAwNjgkajUkbDAkaDA."
+            data-old="30"></span>♡</span>
           <img
             src="https://images.pexels.com/photos/36569357/pexels-photo-36569357.jpeg?_gl=1*199zlti*_ga*NTY0Mzg3MTAzLjE3NzUzMjgxODQ.*_ga_8JE65Q40S6*czE3NzUzMjgxODQkbzEkZzEkdDE3NzUzMzAwNjgkajUkbDAkaDA."
             class="product-img">
@@ -654,28 +656,29 @@
           <p>1 unit</p>
           <div class="price"><span class="old">₹30</span> ₹20</div>
           <div class="cart-controls">
-           <button onclick="handleAddToCart(this)">Add to Cart</button>
+            <button onclick="handleAddToCart(this)">Add to Cart</button>
           </div>
-      </div>
-
-      <div class="product-card">
-        <span class="wishlist" data-name="Biscuits" data-price="₹25" data-img="" data-old=""></span>>♡</span>
-        <img
-          src="https://images.pexels.com/photos/10760874/pexels-photo-10760874.jpeg?_gl=1*1r6zchk*_ga*NTY0Mzg3MTAzLjE3NzUzMjgxODQ.*_ga_8JE65Q40S6*czE3NzUzMjgxODQkbzEkZzEkdDE3NzUzMzAxMDIkajQzJGwwJGgw"
-          class="product-img">
-        <h3>Tissue Paper</h3>
-        <p>1 unit</p>
-        <div class="price"><span class="old">₹40</span> ₹25</div>
-        <div class="cart-controls">
-          <button onclick="handleAddToCart(this)">Add to Cart</button>
         </div>
 
+        <div class="product-card">
+          <span class="wishlist" data-name="Biscuits" data-price="25"
+            data-img="https://images.pexels.com/photos/10760874/pexels-photo-10760874.jpeg?_gl=1*1r6zchk*_ga*NTY0Mzg3MTAzLjE3NzUzMjgxODQ.*_ga_8JE65Q40S6*czE3NzUzMjgxODQkbzEkZzEkdDE3NzUzMzAxMDIkajQzJGwwJGgw"
+            data-old="40"></span>>♡</span>
+          <img
+            src="https://images.pexels.com/photos/10760874/pexels-photo-10760874.jpeg?_gl=1*1r6zchk*_ga*NTY0Mzg3MTAzLjE3NzUzMjgxODQ.*_ga_8JE65Q40S6*czE3NzUzMjgxODQkbzEkZzEkdDE3NzUzMzAxMDIkajQzJGwwJGgw"
+            class="product-img">
+          <h3>Tissue Paper</h3>
+          <p>1 unit</p>
+          <div class="price"><span class="old">₹40</span> ₹25</div>
+          <div class="cart-controls">
+            <button onclick="handleAddToCart(this)">Add to Cart</button>
+          </div>
+        </div>
       </div>
-    </div>
-    
-    <div style="text-align:center; margin-top:20px;">
-      <a href="category.html?cat=cook" class="show-all-btn">Show All →</a>
-    </div>
+
+      <div style="text-align:center; margin-top:20px;">
+        <a href="category.html?cat=cook" class="show-all-btn">Show All →</a>
+      </div>
 
   </section>
 
@@ -691,75 +694,84 @@
 
       <!-- PRODUCT 1 -->
       <div class="product-card">
-        <span class="wishlist" data-name="Orange Juice" data-price="₹60" data-img="" data-old=""></span>♡</span>
+        <span class="wishlist" data-name="Orange Juice" data-price="60"
+          data-img="https://images.unsplash.com/photo-1640213505284-21352ee0d76b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          data-old="80"></span>♡</span>
         <img
           src="https://images.unsplash.com/photo-1640213505284-21352ee0d76b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           class="product-img">
         <h3>Orange Juice</h3>
         <p>1 litre</p>
         <div class="price"><span class="old">₹80</span> ₹60</div>
-      <div class="cart-controls">
+        <div class="cart-controls">
           <button onclick="handleAddToCart(this)">Add to Cart</button>
         </div>
       </div>
 
       <!-- PRODUCT 2 -->
       <div class="product-card">
-        <span class="wishlist" data-name="Cold Coffee" data-price="₹90" data-img="" data-old=""></span>♡</span>
+        <span class="wishlist" data-name="Cold Coffee" data-price="90"
+          data-img="https://images.unsplash.com/photo-1621374571085-9e90cb0ec8fd?q=80&w=679&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          data-old="120"></span>♡</span>
         <img
           src="https://images.unsplash.com/photo-1621374571085-9e90cb0ec8fd?q=80&w=679&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           class="product-img">
         <h3>Cold Coffee</h3>
         <p>250 ml</p>
         <div class="price"><span class="old">₹120</span> ₹90</div>
-         <div class="cart-controls">
+        <div class="cart-controls">
           <button onclick="handleAddToCart(this)">Add to Cart</button>
         </div>
       </div>
 
       <!-- PRODUCT 3 -->
       <div class="product-card">
-        <span class="wishlist" data-name="Energy Drink" data-price="₹110" data-img="" data-old=""></span>♡</span>
+        <span class="wishlist" data-name="Energy Drink" data-price="110"
+          data-img="https://images.unsplash.com/photo-1612094485240-e6249b81c0cc?q=80&w=703&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          data-old="140"></span>♡</span>
         <img
           src="https://images.unsplash.com/photo-1612094485240-e6249b81c0cc?q=80&w=703&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           class="product-img">
         <h3>Energy Drink</h3>
         <p>300 ml</p>
         <div class="price"><span class="old">₹140</span> ₹110</div>
-      <div class="cart-controls">
-         <button onclick="handleAddToCart(this)">Add to Cart</button>
+        <div class="cart-controls">
+          <button onclick="handleAddToCart(this)">Add to Cart</button>
         </div>
       </div>
 
       <!-- PRODUCT 4 -->
       <div class="product-card">
-        <span class="wishlist" data-name="Green Tea" data-price="₹150" data-img="" data-old=""></span>♡</span>
+        <span class="wishlist" data-name="Green Tea" data-price="150"
+          data-img="https://images.unsplash.com/photo-1607048306486-35e208ae51cb?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          data-old="180"></span>♡</span>
         <img
           src="https://images.unsplash.com/photo-1607048306486-35e208ae51cb?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           class="product-img">
         <h3>Green Tea</h3>
         <p>100 gm</p>
         <div class="price"><span class="old">₹180</span> ₹150</div>
-       <button onclick="handleAddToCart(this)">Add to Cart</button>
+        <button onclick="handleAddToCart(this)">Add to Cart</button>
       </div>
 
       <!-- PRODUCT 5 -->
       <div class="product-card">
-        <span class="wishlist" data-name="Soft Drink" data-price="₹45" data-img="" data-old=""></span>♡</span>
+        <span class="wishlist" data-name="Soft Drink" data-price="45"
+          data-img="https://images.unsplash.com/photo-1527960392543-80cd0fa46382?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          data-old="60"></span>♡</span>
         <img
           src="https://images.unsplash.com/photo-1527960392543-80cd0fa46382?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           class="product-img">
         <h3>Soft Drink</h3>
         <p>500 ml</p>
         <div class="price"><span class="old">₹60</span> ₹45</div>
-       <div class="cart-controls">
-         <button onclick="handleAddToCart(this)">Add to Cart</button>
+        <div class="cart-controls">
+          <button onclick="handleAddToCart(this)">Add to Cart</button>
         </div>
       </div>
-
+    </div>
     </div>
 
-    </div>
     <div style="text-align:center; margin-top:20px;">
       <a href="category.html?cat=beverages" class="show-all-btn">Show All →</a>
     </div>
@@ -801,9 +813,9 @@
         <h3 class="mt">Categories</h3>
 
         <div class="categories">
-          <a href="#">Staples</a> |
+          <a href="#">Daily Food items</a> |
           <a href="#">Snacks</a> |
-          <a href="#">Beverages</a> |
+          <a href="#">Drinks</a> |
           <a href="#">Dairy</a> |
           <a href="#">Ready To Cook</a> |
           <a href="#">Baby Care</a> |
@@ -827,26 +839,19 @@
     <button onclick="goToCart()">View Cart</button>
   </div>
   <!-- SCRIPT -->
-  
-  
 
-<script src="js/script.js" defer></script>
+ <script src="js/script.js" defer></script>
   <script src="js/cat.js" defer></script>
+
   <script>
     function goToCategory(category) {
       window.location.href = "category.html?cat=" + category;
-      
-      }
-    
+    }
   </script>
-   <a href="https://wa.me/916205338603?text=Hello%20I%20want%20to%20place%20an%20order"
-   class="whatsapp-btn"
-   target="_blank">
 
+  <a href="https://wa.me/916205338603?text=Hello%20I%20want%20to%20place%20an%20order" class="whatsapp-btn"
+    target="_blank">
     <span>Click to chat</span>
-
-  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="whatsapp">
-  
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="whatsapp">
 </body>
-
 </html>

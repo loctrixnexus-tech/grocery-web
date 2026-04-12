@@ -1,4 +1,4 @@
-let cart = JSON.parse(localStorage.getItem("cart")) || {};
+window.cart = JSON.parse(localStorage.getItem("cart")) || {};
 
 // =====================
 // LOAD CART
@@ -95,6 +95,8 @@ function clearCart() {
   cart = {};
   loadCart();
 }
+
+
 
 // =====================
 // INIT

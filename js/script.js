@@ -403,8 +403,10 @@ function goCategory(cat) {
   window.location.href = "category.html?cat=" + cat;
 }
 
-function saveCart(){
-  localStorage.setItem("cart",JSON.stringify(cart));
+function saveCart() {
+  localStorage.setItem("cart", JSON.stringify(cart));
+  loadCart();
+  updateCartCount(); // 🔥 ADD THIS
 }
 
 
@@ -439,12 +441,16 @@ function updateCartBar() {
 }
 
 
-function updateCartCount(){
-  let total=0;
-  for(let name in cart){
-    total+=cart[name].qty;
+function updateCartCount() {
+  let cart = JSON.parse(localStorage.getItem("cart")) || {};
+
+  let total = 0;
+
+  for (let key in cart) {
+    total += cart[key].qty;
   }
-  document.getElementById("cartCount").innerText=total;
+
+  document.getElementById("cartCount").innerText = total; 
 }
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -603,7 +609,159 @@ function safeSetHTML(id, value) {
   if (el) el.innerHTML = value;
 }
 
+function updateWishlistCount() {
+  let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+  document.getElementById("wishlistCount").innerText = wishlist.length;
+}
+
+
+window.onload = function () {
+  updateCartCount();
+  updateWishlistCount();
+};
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const searchInput = document.querySelector(".search-box");
+  const searchBtn = document.querySelector(".search-btn");
+
+  if (!searchInput || !searchBtn) return;
+
+  function performSearch() {
+
+    const value = searchInput.value.toLowerCase().trim();
+
+    // 🔥 ALL POSSIBLE SELECTORS
+    const products = document.querySelectorAll(".product-card, .card");
+
+    let found = false;
+
+    products.forEach(product => {
+
+      const text = product.innerText.toLowerCase();
+
+      if (text.includes(value)) {
+        product.style.display = "block";
+        found = true;
+      } else {
+        product.style.display = "none";
+      }
+
+    });
+
+    // ❌ अगर product नहीं मिला
+    if (!found && value !== "") {
+      showNoResult();
+    } else {
+      removeNoResult();
+    }
+  }
+
+  // 🔍 typing search
+  searchInput.addEventListener("input", performSearch);
+
+  // 🔍 button search
+  searchBtn.addEventListener("click", performSearch);
+
+});
 
 
 
+function showNoResult() {
+  let msg = document.getElementById("noResult");
 
+  if (!msg) {
+    msg = document.createElement("h2");
+    msg.id = "noResult";
+    msg.innerText = "❌ No product found";
+    msg.style.textAlign = "center";
+
+    const container = document.getElementById("products") || document.body;
+    container.appendChild(msg);
+  }
+}
+
+function removeNoResult() {
+  const msg = document.getElementById("noResult");
+  if (msg) msg.remove();
+}
+
+
+// 🔥 SEARCH BUTTON HANDLER (ADD AT END OF script.js)
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const searchBtn = document.querySelector(".search-btn");
+  const searchInput = document.querySelector(".search-box");
+
+  if (!searchBtn || !searchInput) return;
+
+  searchBtn.addEventListener("click", function () {
+
+    const value = searchInput.value.trim();
+
+    if (value === "") return;
+
+    const products = document.querySelectorAll(".product-card, .card");
+
+    if (products.length > 0) {
+      const event = new Event("input");
+      searchInput.dispatchEvent(event);
+    } else {
+      searchRedirect(value);
+    }
+
+  });
+
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const searchInput = document.querySelector(".search-box");
+  const searchBtn = document.querySelector(".search-btn");
+
+  // ❌ अगर search box नहीं है तो exit
+  if (!searchInput || !searchBtn) return;
+
+  function performSearch() {
+
+    const value = searchInput.value.toLowerCase().trim();
+
+    const products = document.querySelectorAll(".product-card");
+
+    // ❌ अगर products ही नहीं हैं तो कुछ मत करो
+    if (products.length === 0) return;
+
+    let found = false;
+
+    products.forEach(product => {
+
+      const name = product.querySelector("h3")?.innerText.toLowerCase() || "";
+      const text = product.innerText.toLowerCase();
+
+      if (name.includes(value) || text.includes(value)) {
+        product.style.display = "block";
+        found = true;
+      } else {
+        product.style.display = "none";
+      }
+
+    });
+
+    // 🔥 optional: scroll to results
+    if (found) {
+      document.querySelector(".product-section")?.scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+  }
+
+  // ✅ LIVE SEARCH
+  searchInput.addEventListener("input", performSearch);
+
+  // ✅ BUTTON CLICK
+  searchBtn.addEventListener("click", performSearch);
+
+});

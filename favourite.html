@@ -34,24 +34,14 @@
           <ul class="left-menu">
 
             <li onmouseover="showSub('staples')" onclick="goCategory('staples')">Staples</li>
-
             <li onmouseover="showSub('snacks')" onclick="goCategory('snacks')">Snacks & Packaged Food</li>
-
             <li onmouseover="showSub('beverages')" onclick="goCategory('beverages')">Beverages</li>
-
             <li onmouseover="showSub('dairy')" onclick="goCategory('dairy')">Chilled & Dairy Foods</li>
-
             <li onmouseover="showSub('cook')" onclick="goCategory('cook')">Ready To Cook</li>
-
-
             <li onmouseover="showSub('baby')" onclick="goCategory('baby')">Baby Care</li>
-
             <li onmouseover="showSub('house')" onclick="goCategory('house')">Household Essentials</li>
-
             <li onmouseover="showSub('clean')" onclick="goCategory('clean')">Cleaning Needs</li>
-
             <li onmouseover="showSub('personal')" onclick="goCategory('personal')">Personal Care</li>
-
             <li onmouseover="showSub('health')" onclick="goCategory('health')">Health Care</li>
 
           </ul>
@@ -78,6 +68,50 @@
   </nav>
 
 
+    <div class="popup" id="locationPopup">
+    <div class="popup-content">
+
+      <!-- CLOSE -->
+      <span class="close" id="closePopup">✖</span>
+
+      <h2>Specify Your Location</h2>
+
+      <!-- DELIVERY / PICKUP -->
+      <div class="tabs">
+        <label><input type="radio" name="type" checked> Delivery</label>
+        <label><input type="radio" name="type"> Pickup</label>
+      </div>
+
+      <p>Where do you want us to deliver?</p>
+
+      <!-- INPUT AREA -->
+      <div class="location-input">
+        <button class="current-btn" id="currentLocationBtn">📍 Use Current Location</button>
+        <input type="text" id="locationInput" placeholder="Search locality or street name">
+        <button class="confirm-btn" id="confirmBtn">Confirm</button>
+      </div>
+
+      <!-- MESSAGE -->
+      <p id="locationMessage"></p>
+
+      <!-- SKIP -->
+      <button class="skip-btn">Skip For Now</button>
+
+      <!-- ❌ NOT SERVING BOX -->
+      <div id="notServingBox" class="not-serving">
+        <p class="note">
+          Note: Product availability, prices, and delivery options will vary based on the delivery location!
+        </p>
+
+        <h3>Sorry, we're not serving in your location</h3>
+
+        <button class="proceed-btn">Proceed to shopping</button>
+      </div>
+
+    </div>
+  </div>
+
+
  <section class="products-section">
 
   <h2 id="pageTitle" class="page-title">❤️ Favorites</h2>
@@ -87,40 +121,30 @@
 </section>
 
   <footer class="footer">
-
     <div class="footer-container">
-
       <!-- LEFT -->
       <div class="footer-left">
         <h2>Shivam<span>Mart</span></h2>
-
         <p>
           Police line road jamui bihar<br>
-
           bihar - 600044
         </p>
-
         <div class="footer-links">
           <a href="#">Privacy Policy</a> |
           <a href="#">Refund Policy</a> |
           <a href="#">Shipping Policy</a> |
           <a href="#">Terms and Condition</a>
         </div>
-
         <p class="copyright">
           Copyright © 2026 Shivam Mart. All Rights Reserved
         </p>
       </div>
-
       <!-- CENTER -->
       <div class="footer-center">
         <h3>Need Help</h3>
-
           <p class="phone">📞 +91 62053 38603</p>
-
         <h3 class="mt">Categories</h3>
-
-        <div class="categories">
+       <div class="categories">
           <a href="#">Staples</a> |
           <a href="#">Snacks</a> |
           <a href="#">Beverages</a> |
@@ -133,17 +157,12 @@
           <a href="#">Personal Care</a>
         </div>
       </div>
-
       <!-- RIGHT -->
       <div class="footer-right">
         <h3>Links</h3>
-
         <a href="index.html">Home</a>
         <a href="#">New Arrivals</a>
-
-
       </div>
-
   </footer>
 
     <div id="cartBar" class="cart-bar">
